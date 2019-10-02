@@ -63,19 +63,41 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* Copy and paste your work from yesterday  and start to refactor into flexbox */
+
+/* css tools start */
 @import url('https://fonts.googleapis.com/css?family=PT+Mono&display=swap');
 
+/* set elements to flex with this class */
 .flexContainer {
 	display: flex;
 }
 
+/* set page width */
 .maxWidth {
 	max-width: 80%;
 	margin: auto;
 	position: relative;
 }
 
+/* make buttons */
+.button button {
+	width: 205px;
+	height: 40px;
+	font-size: 18px;
+	border: 1px solid black;
+	background-color: white;
+}
+
+/* set banner image widths */
+.bannerImg {
+	width: 100%;
+}
+/* css tools end */
+
+
+
+/* sitewide navigation styles begin */
 .navBar {
 	position: fixed;
 	height: 100px;
@@ -89,7 +111,7 @@ h1, h2, h3, h4, h5 {
 
 .logo {
 	align-self: center;
-	margin-left: 70px;
+	margin-left: 8%;
 }
 
 .navBar a {
@@ -100,41 +122,54 @@ h1, h2, h3, h4, h5 {
 nav a:hover {
 	color: black;
 }
+/* navigation styles end */
 
+
+
+/* header styles start */
+
+/* all pages styles start */
 header {
 	margin-top: 100px;
-	padding-bottom: 40px;
-	margin-bottom: 40px;
+	padding-bottom: 6%;
+	margin-bottom: 6%;
 	border-bottom: 2px solid grey;
 	justify-content: space-around;
 }
+/* all pages styles end */
 
+/* index.html header styles begin */
 .headerImage {
 	align-self: center;
 }
 
 .titleAndButtton {
 	align-self: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 .siteTitle {
 	font-size: 90px;
 	text-align: center;
 }
+/* index.html header styles end */
 
-.button button {
-	width: 205px;
-	height: 40px;
-	font-size: 18px;
+/* services.html styles start */
+.servicesHeaderImg {
+	margin: 0 0 6%;
 }
+/* services.html styles end */
 
-.button {
-	display: block;
-	text-align: center;
-}
+/* header styles end */
 
+
+
+/* main content styles start */
+
+/* index.html  styles start */
 .topContent {
-	margin: 40px 0 40px;
+	margin: 6% 0 6%;
 	justify-content: space-between;
 }
 
@@ -147,12 +182,8 @@ header {
 	width: 47%;
 }
 
-.bannerImg {
-	width: 100%;
-}
-
 .bottomContent {
-	margin: 40px 0 0;
+	margin: 6% 0 0;
 }
 
 .bottomLeft {
@@ -169,19 +200,79 @@ header {
 .bottomRight {
 	width: 32%;
 }
+/* index.html styles end */
 
+/* services.html styles start */
+.servicesRowContainer {
+	justify-content: space-between;
+}
+
+.servicesRowItem {
+	background-color: #F4F3F4;
+	width: 47%;
+	padding: 3%;
+	border: 1px solid black;
+	flex-direction: column;
+}
+
+.servicesRowMiddle {
+	margin: 6% 0 6%;
+}
+
+.servicesLearnMore {
+	margin-top: 12%;
+}
+
+.servicesLearnMore button {
+	border-radius: 5px;
+}
+/* services.html styles end */
+
+/* main content styles end */
+
+
+
+/* footer styles start */
+
+/* all pages styles start */
 footer {
 	border-top: 2px solid grey;
-	padding-top: 40px;
-	margin-top: 40px;
+	padding-top: 6%;
+	margin-top: 6%;
 }
 
 .copyright {
 	text-align: center;
-	margin: 50px 0 100px;
-	font-family: "PT Mono";
+	margin: 12% 0 12%;
 }
 
-.servicesHeaderImg {
-	margin: 0 0 50px;
+.copyright small {
+	font-family: 'PT Mono', monospace;
 }
+/* all pages styles end */
+
+/* services.html styls start */
+.servicesInfo {
+	justify-content: space-between;
+}
+
+.servicesInfoImg {
+	align-self: center;
+	width: 47%
+}
+
+.servicesFootercolumn {
+	width: 47%;
+}
+.servicesFooterUL {
+	list-style-type: square;
+	list-style-position: inside;
+	margin-top: 7%;
+}
+.servicesFooterUL li {
+	margin-bottom: 6%;
+}
+/* services.html styles end */
+
+/* footer styles end */
+
