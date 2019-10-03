@@ -65,6 +65,12 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday  and start to refactor into flexbox */
 
+/* responsive design stretch goal, removes mobile logo */
+.mobileLogo {
+	display: none;
+}
+/* stretch goal end */
+
 /* css tools start */
 @import url('https://fonts.googleapis.com/css?family=PT+Mono&display=swap');
 
@@ -101,8 +107,10 @@ h1, h2, h3, h4, h5 {
 .navBar {
 	position: fixed;
 	height: 100px;
-	width: 80%;
+	width: 100%;
 	top: 0;
+	left: 0;
+	padding: 0 5%;
 	background-color: white;
 	z-index: 999;
 	align-items: center;
@@ -276,3 +284,80 @@ footer {
 
 /* footer styles end */
 
+
+
+/* media query stretch goal */
+
+@media (max-width: 350px) {
+	.navBar {
+		padding: 0;
+	}
+}
+
+@media (max-width: 550px) {
+	.logo {
+		display: none;
+	}
+	.mobileLogo {
+		display: inline-block;
+		position: absolute;
+		width: 100px;
+		top: 10%;
+		right: 3%;
+	}
+	.navBar {
+		width: 100%;
+		align-items: flex-end;
+		justify-content: space-evenly;
+		height: 70px;
+		padding-bottom: 10px;
+		margin-bottom: 30px;
+	}
+	header {
+		margin-top: 100px;
+	}
+}
+@media (max-width: 700px) {
+	.maxWidth {
+		max-width: 100%;
+	}
+	.logo {
+		width: 75px;
+	}
+	.servicesRowContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+	.servicesRowItem {
+		width: 95%;
+		padding: 5 2.5%;
+		border: none;
+	}
+	.servicesMobileMargin {
+		margin-bottom: 6%;
+	}
+	.servicesInfoImg {
+		display: none;
+	}
+	.servicesFootercolumn {
+		width: 100%;
+	}
+	.servicesHeaderImg, header h1, header p {
+		padding: 0 5% 6%;
+	}
+	footer h2, footer p, footer ul {
+		padding: 0 5%;
+	}
+	.servicesHeaderImg {
+		margin-bottom: 0;
+	}
+	header {
+		border: none;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	footer {
+		border: none;
+		margin-top: 0;
+	}
+}
